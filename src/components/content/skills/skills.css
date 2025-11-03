@@ -1,0 +1,48 @@
+#Skills {
+        width: 100%;
+        padding: 30px;
+        padding-top: 0px;   
+        color: white;
+        padding-bottom: 10px;
+        font-family: roboto;
+}
+
+#Skills #title_skills:nth-child(1) {
+    color: white;
+    font-size: 18px;
+    font-family: roboto;
+    padding-bottom: 10px;
+}
+#container_skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+}
+
+.skill {
+    width: 100%;
+    background: linear-gradient(180deg, rgb(17, 17, 17), rgb(18, 19, 24));
+    box-shadow: 1px 1px 12px  rgba(118, 191, 255, 0.199);
+    margin: 10px;
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 18px;
+}
+
+.skill h1 {    
+    color: white;
+    font-size: 18px;
+    font-family: roboto;
+    margin: 10px;
+    margin-bottom: 0px; 
+}
+
+.skill p {
+    color: rgb(175, 175, 175);
+    margin-top: 0px;
+    margin: 10px;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}

@@ -1,0 +1,404 @@
+* {
+    transition: all 0.2s;
+}
+
+
+html {
+     background: linear-gradient(180deg, rgb(30, 35, 48), rgb(15, 15, 15));
+     background-repeat: no-repeat;
+     background-color: rgb(15, 15, 15);
+         cursor: url('/image/cursor.cur'), auto; 
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+        
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: rgb(37, 37, 37);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #acacac;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.content-body {
+    width: 100%;
+        height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 111111111;
+
+}
+
+#preloader.LoadHidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    position: absolute;
+
+    top: 390;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: rgb(21, 181, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.scene {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 180;
+
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 255, 255, 0.3);
+    border: 2px solid cyan;
+    box-shadow: 0 0 10px cyan;
+}
+
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotateCube {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+body {
+    overflow: hidden;
+}
+
+body.LoadHidden {
+    overflow: visible;
+}
+
+
+.preloader-container {
+    perspective: 1000px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+
+.fz-text {
+    position: relative;
+    font-size: 170px;
+    font-family: monospace;
+    font-weight: 900;
+    color: transparent;
+    transform-style: preserve-3d;
+    animation: float 3s infinite ease-in-out;
+    margin-bottom: 50px;
+    text-shadow: none;
+    line-height: 1;
+    z-index: 10;
+}
+
+.fz-text span {
+    margin: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.f-letter {
+    background: linear-gradient(45deg, #ff2d55, #ff6b81);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 0 10px;
+    transform: translateZ(0);
+}
+
+.z-letter {
+    background: linear-gradient(45deg, #1e90ff, #70a1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 0 10px;
+    margin-left: -30px;
+    transform: translateZ(0);
+}
+
+
+.fz-text span:before {
+    content: attr(data-char);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.2);
+    transform: translateZ(-30px);
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+}
+
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotateX(10deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotateX(10deg);
+    }
+}
+
+
+@keyframes textPulse {
+    0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 21212121212;
+    filter: blur(1px);
+    transition: opacity 1.5s ease-out;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.ContainerPixels {
+    user-select: none;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 9018;
+}
+
+
+
+#cloud1 {
+    width: 220px;
+    position: absolute;
+    left: 66px;
+    top: 91px;
+    animation: flyleft 10s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#cloud1,
+#cloud2 {
+    user-select: none;
+}
+
+#cloud2 {
+    width: 220px;
+    position: absolute;
+    right: 66px;
+    top: 251px;
+    animation: flyright 10s ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+#platform1_img {
+    width: 250px;
+    filter: brightness(70%);
+}
+
+#platform2_img {
+    width: 250px;
+
+    filter: brightness(70%);
+}
+
+#contmain1 {
+        position:sticky;
+    top: 800px;
+    margin-left: 5%;
+}
+
+#contmain2 {
+    position:sticky;
+    top: 500px;
+    margin-left: 80%;
+    padding-bottom: 50px;
+}
+
+.divline {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+}
+#danceAnime {
+    width: 140px;
+    display: block;
+    position: relative;
+    top: 30px;
+        margin-left: 60px;
+    z-index: 2323;
+}
+
+#campfire {
+        width: 110px;
+    display: block;
+    position: relative;
+    top: 30px;
+    margin-left: 80px;
+    z-index: 2323;
+}
+
+@keyframes flyleft {
+    0% {
+        left: 66px;
+    }
+
+    50% {
+        left: 106px;
+    }
+
+    100% {
+        left: 66px;
+    }
+
+}
+
+@keyframes flyright {
+    0% {
+        right: 66px;
+    }
+
+    50% {
+        right: 86px;
+    }
+
+    100% {
+        right: 66px;
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+    #cloud1,
+    #cloud2 {
+        display: none;
+    }
+}

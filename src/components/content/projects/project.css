@@ -1,0 +1,112 @@
+#container_projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Project {
+        width: 100%;
+        padding: 30px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+}
+
+#Wonderix_img {
+    background-image: url("/image/wonderix.jpg");
+        background-repeat: no-repeat;
+    background-size: 100%;
+    height:11vw;
+    width: 98%;
+    border-radius: 15px;
+}
+
+#AliThemes_img {
+    background-image: url("https://raw.githubusercontent.com/TheFuZeeXD/Aliucord-Themes/refs/heads/main/Dyno%20Theme/preview.jpg");
+        background-repeat: no-repeat;
+    background-size: 100%;
+    height:11vw;
+    width: 98%;
+    border-radius: 15px;
+}
+.project {
+    width: 100%;
+    box-shadow: 1px 1px 12px  rgba(118, 191, 255, 0.199);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgb(17, 17, 17), rgb(18, 19, 24));
+    padding: 15px;
+    border-radius: 18px;
+    margin: 0px 20px;
+}
+
+#Project h1:nth-child(1) {
+    color: white;
+    font-size: 18px;
+    font-family: roboto;
+    padding-bottom: 10px;
+}
+.project img {
+    width: 98%;
+    height: 190px;
+    align-self: center;
+    padding: 10px;
+    padding-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.project h1 {
+    margin-left: 8px;
+        color: white;
+    font-size: 18px;
+    font-family: roboto;
+}
+.project p {
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+    font-family: roboto;
+    margin-left: 8px;
+    margin-top: 0px;
+}
+
+.project .project_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .project_footer span {
+    color: rgb(121, 121, 121);
+    font-size: 16px;
+    font-family: roboto;
+    margin-left: 8px;
+}
+
+.project .project_footer button {
+    background-color: rgb(14, 18, 20);
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 12px  rgba(118, 191, 255, 0.582);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-family: roboto;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project .project_footer button:hover {
+    background-color: rgb(118, 191, 255);
+    color: black;
+}
+
+.project #fluffy_img {
+    background-image: url("/image/fluffy.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:11vw;
+    width: 98%;
+    border-radius: 15px;
+}

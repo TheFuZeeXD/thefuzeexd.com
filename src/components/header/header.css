@@ -1,0 +1,93 @@
+header {
+    display:grid;
+    align-items:center;
+    height:90px;
+    background-color: rgb(18, 18, 19);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 33px rgba(123, 160, 238, 0.295);
+    color: white;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+header #avatar_header {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/image/avatar.gif");
+    background-size: 100%;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+    font-family: roboto;
+    color: rgba(255, 255, 255, 0);
+    user-select: none;
+}
+
+header #avatar_header:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+header .container_header:nth-child(1) {
+    display: flex;
+    gap: 15px;
+    justify-self: start;
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+header .container_header:nth-child(2) {
+    display: flex;
+    gap: 15px;
+    justify-self: end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .container_header:nth-child(2) ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+header .container_header:nth-child(2) ul li {
+    padding: 4px;
+    margin: 3px 5px;
+    font-size:17px;
+    font-family: roboto;
+    cursor: pointer ;
+    user-select: none;
+}
+
+header .container_header:nth-child(2) ul li:hover {
+    transform: translateY(-3px);
+    color:rgb(87, 161, 247);
+}
+
+header .container_header:nth-child(2) ul li:active {
+    color:rgb(0, 119, 255);
+    transition: color 0.1s;
+}
+
+header #logo_header {
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+}
+
+header #logo_header  span:nth-child(1) {
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+header #logo_header  span:nth-child(2) {
+    font-family: roboto;
+    font-size: 13px;
+}
