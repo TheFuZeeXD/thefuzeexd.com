@@ -25,5 +25,5 @@ lang.ts
 language
 main.html
 *.sw?
-
+.verify-email.php
 .php-tmp

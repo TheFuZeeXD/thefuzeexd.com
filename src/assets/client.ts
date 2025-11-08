@@ -6,6 +6,7 @@ import About from "../components/content/about/About"
 import Project from "../components/content/projects/Project"
 import Skills from "../components/content/skills/Skills"
 import Contact from "../components/content/contact/Contact"
+
 export const HTMLDoom: object = {
     Header,
     Footer,
@@ -13,7 +14,7 @@ export const HTMLDoom: object = {
     About,
     Project,
     Skills,
-    Contact
+    Contact,
 }
 
 // Themes and Time

@@ -11,7 +11,7 @@ export default function Footer() {
       <div id="main_footer_container">
 
       <div id="line1"></div>
-      <div id="link_thefuzeexd"><a href="https://thefuzeexd.ru/fluffy/main">prod by Fluffy</a><span>{LanguagePack.footer.title}</span><a href="https://thefuzeexd.ru">thefuzeexd.ru</a></div>
+      <div id="link_thefuzeexd"><a href="https://thefuzeexd.com/fluffy/main">prod by Fluffy</a><span>{LanguagePack.footer.title}</span><a href="https://thefuzeexd.com">thefuzeexd.com</a></div>
       <div id="ImgBox">
       </div>
       </div>

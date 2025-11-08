@@ -11,7 +11,7 @@
 }
 
 #Wonderix_img {
-    background-image: url("/image/wonderix.jpg");
+    background-image: url("/image/wonderix.webp");
         background-repeat: no-repeat;
     background-size: 100%;
     height:11vw;
@@ -20,7 +20,7 @@
 }
 
 #AliThemes_img {
-    background-image: url("https://raw.githubusercontent.com/TheFuZeeXD/Aliucord-Themes/refs/heads/main/Dyno%20Theme/preview.jpg");
+    background-image: url("/image/dyno.webp");
         background-repeat: no-repeat;
     background-size: 100%;
     height:11vw;
@@ -103,7 +103,7 @@
 }
 
 .project #fluffy_img {
-    background-image: url("/image/fluffy.jpg");
+    background-image: url("/image/fluffy.webp");
     background-repeat: no-repeat;
     background-size: 100%;
     height:11vw;
