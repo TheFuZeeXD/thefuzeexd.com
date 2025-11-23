@@ -77,7 +77,7 @@ const onClick_2 = () => {
                 </div>
                 </div>
                 <div id="content_card_info_socials">
-                    <span onClick={() => {window.location.href = 'https://discord.com/oauth2/authorize?client_id=1429847066863210568';}}>Discord</span>
+                    <span onClick={() => {window.location.href = 'https://t.me/TheFuZeeXD';}}>Telegram</span>
                     <span onClick={() => {window.location.href = 'https://ru.pinterest.com/TheFuZeeXD/';}}>Pinterest</span>
                     <span onClick={() => {window.location.href = 'https://www.youtube.com/@TheFuZeeXD';}}>YouTube</span>
                 </div>
