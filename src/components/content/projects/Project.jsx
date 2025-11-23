@@ -13,7 +13,7 @@ export default function Project() {
                     <h1>Fluffy</h1>
                     <p>Fluffy — это умный и доброжелательный Discord-бот, созданный, чтобы сделать ваш сервер живым, уютным и уникальным.</p>
                     <div className="project_footer">
-                        <span>Discord.js</span>
+                        <span>Discord.py</span>
                         <button onClick={() => {window.location.href = 'https://thefuzeexd.com/fluffy/main';}}>Подробнее</button>
                         </div></div>
                 <div className="project fade-in" id="Wonderix">
