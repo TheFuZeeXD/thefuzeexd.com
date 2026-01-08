@@ -1,9 +1,5 @@
 <?php
 
-$host = 'thefuzeexd.beget.tech';
-$dbname = 'thefuzeexd_fzff';
-$username = 'thefuzeexd_fzff';
-$password = 'X130809@Xxx';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
