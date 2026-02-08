@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 .php-tmp
 /resource/php
-auth
