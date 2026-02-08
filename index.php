@@ -93,7 +93,7 @@ if ($error === 'invalid email') {
   <meta property="og:url" content="https://thefuzeexd.com">
   <meta property="og:image" content="https://thefuzeexd.com/image/favicon.png">
   <link rel="icon" type="image/png" href="https://thefuzeexd.com/image/favicon.png" />
-  <link rel="stylesheet" href="resource/css/noscript.css">
+  <link rel="stylesheet" href="https://github.com/TheFuZeeXD/thefuzeexd.com/blob/main/resource/css/noscript.css?raw=true">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thefuzeexd.com" />
 </head>
@@ -105,7 +105,7 @@ if ($error === 'invalid email') {
 <?php if (!empty($error)) { ?>
     <aside>
         <div class="notif">
-            <h1><img src="public/image/icons/warning_icon.png" width="30" alt="error"> <?php echo $errorTitle?></h1>
+            <h1><img src="https://github.com/TheFuZeeXD/thefuzeexd.com/blob/main/public/image/icons/warning_icon.png?raw=true" width="30" alt="error"> <?php echo $errorTitle?></h1>
             <p><?php echo $errorDescription?></p>
         </div>
     </aside>

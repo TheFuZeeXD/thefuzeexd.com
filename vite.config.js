@@ -25,11 +25,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: path.resolve(__dirname, 'index.php'),
-<<<<<<< HEAD
       external: [],
-=======
-      external: [], 
->>>>>>> 43464bc8670e69a86637ce558e0197b5f857b311
     }
   },
   resolve: {
@@ -38,8 +34,4 @@ export default defineConfig({
     }
   },
   assetsInclude: ['**/*.php']
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> 43464bc8670e69a86637ce558e0197b5f857b311
