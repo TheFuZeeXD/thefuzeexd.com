@@ -1,0 +1,39 @@
+body, html {
+    width: 100%;
+    background: linear-gradient(180deg, rgb(30, 35, 48), rgb(15, 15, 15));
+    height: 100%;
+    font-family: roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin: -8px;
+    padding: 0px;
+}
+
+button {
+    width: 200px;
+    height: 37px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(42, 55, 63);
+    transition: all 0.11s;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    margin: 0px;
+}
+button:hover {
+    background-color: rgb(86, 138, 138);
+}
+
+button:active {
+    background-color: rgb(27, 160, 160);
+}

@@ -9,18 +9,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
-     usePHP({
-      // Базовый путь к PHP файлам
+    usePHP({
       entry: './**/*.php',
-      // Настройки прокси для PHP сервера
       proxy: {
-        '.*': 'http://localhost:8000' // или ваш PHP сервер
+        '.*': 'http://localhost:8000'
       }
     })
   ],
-   server: {
+  server: {
     port: 3000,
-    // Настройки для работы с PHP
     cors: true,
     strictPort: true
   },
@@ -28,26 +25,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-        rollupOptions: {
-      input: './index.html', // используйте index.html для сборки
-      external: [/\.php$/] // игнорировать PHP файлы
-    },
     rollupOptions: {
       input: path.resolve(__dirname, 'index.php'),
-      output: {
-        assetFileNames: 'assets/[name].[hash][extname]',
-        entryFileNames: 'assets/[name].[hash].js'
-      }
+      external: [],
     }
-  },
-
-  assetsInclude: ['**/*.php'],
-    optimizeDeps: {
-    exclude: ['**/*.php']
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@components': path.resolve(__dirname, './src/components')
     }
-  }
+  },
+  assetsInclude: ['**/*.php']
 })

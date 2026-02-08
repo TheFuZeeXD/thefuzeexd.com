@@ -1,14 +1,20 @@
+:root {
+    --header-animation: 3.7s;
+    --loadheader-content-animation: 4s;
+}
+
 header {
     display:grid;
     align-items:center;
     height:90px;
     background-color: rgb(18, 18, 19);
-    width: 100%;
+    width: 0%;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 1px 1px 33px rgba(123, 160, 238, 0.295);
     color: white;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    animation: loadheader 0.5s var(--header-animation) both ease;
 }
 
 header #avatar_header {
@@ -17,7 +23,7 @@ header #avatar_header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/image/avatar.gif");
+    background-image: url("/image/favicon.png");
     background-size: 100%;
     border-radius: 8px;
     font-size: 22px;
@@ -90,4 +96,14 @@ header #logo_header  span:nth-child(1) {
 header #logo_header  span:nth-child(2) {
     font-family: roboto;
     font-size: 13px;
+}
+
+#main_container_header {
+    display:grid;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    animation: loadheader_content 0.4s var(--loadheader-content-animation) ease both;
+    opacity: 0;
 }

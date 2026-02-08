@@ -1,5 +1,7 @@
 <?php 
-$error = $_GET['mail_status'];
+$accept_language = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '';
+if (stripos($accept_language, 'ru') == false) {
+if (isset($_GET['mail_status'])) {$error = $_GET['mail_status'];
 $errorTitle = "Произошла ошибка!";
 $errorDescription = "Неизвестная ошибка. Пожалуйста, попробуйте позже.";
 
@@ -19,12 +21,39 @@ if ($error === 'invalid email') {
     $errorTitle = "Уведомление";
     $errorDescription = "Контактная форма была отправлена!";
 }
+}
+} else {
+if (isset($_GET['mail_status'])) {$error = $_GET['mail_status'];
+$errorTitle = "An error has occurred!";
+$errorDescription = "Unknown error. Please try again later.";
+
+if ($error === 'invalid email') {
+    $errorTitle = "An error has occurred!";
+    $errorDescription = "The email you specified either does not exist or is invalid. Please try again.";
+} elseif ($error === 'empty description') {
+    $errorTitle = "An error has occurred!";
+    $errorDescription = "You did not specify a description. Please fill in this field and try again.";
+} elseif ($error === 'rate limit exceeded') {
+    $errorTitle = "An error has occurred!";
+    $errorDescription = "You have exceeded the maximum number of attempts to submit the form. Please try again later.";
+} elseif ($error === 'database error save') {
+    $errorTitle = "Notification";
+    $errorDescription = "An error occurred while saving your data. Please try again later.";
+} elseif ($error === 'complete') {
+    $errorTitle = "Notification";
+    $errorDescription = "The contact form has been sent!";
+}
+}
+
+}
+
+
 ?>
 
 
 
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="theme-color" content="#386cfc">
@@ -63,26 +92,30 @@ if ($error === 'invalid email') {
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thefuzeexd.com">
   <meta property="og:image" content="https://thefuzeexd.com/image/favicon.png">
-  <link rel="icon" type="image/png" href="/image/favicon.png" />
+  <link rel="icon" type="image/png" href="https://thefuzeexd.com/image/favicon.png" />
+  <link rel="stylesheet" href="resource/css/noscript.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thefuzeexd.com" />
 </head>
 <body>
   <!-- Created by TheFuZeeXD ʕ ᵔᴥᵔ ʔ
     Source code: https://github.com/TheFuZeeXD/thefuzeexd.com
-    2025 © TheFuZeeXD All rights reserved. -->
+    2026 © TheFuZeeXD All rights reserved. -->
   <div id="root"></div>
 <?php if (!empty($error)) { ?>
     <aside>
         <div class="notif">
-            <h1><?php echo $errorTitle?></h1>
+            <h1><img src="public/image/icons/warning_icon.png" width="30" alt="error"> <?php echo $errorTitle?></h1>
             <p><?php echo $errorDescription?></p>
         </div>
     </aside>
 <?php } ?>
   <script type="module" src="/src/main.jsx"></script>
   <noscript>
-    Oh no. You have JavaScript disabled! Please enable it and reload the page.
+  <div id="noscript">
+    <h1>Страница не может быть загружена</h1>
+    <p>У вас отключен JavaScript. Пожалуйста включите его и перезагрузите страницу!</p>
+  </div>
   </noscript>
 </body>
 

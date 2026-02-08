@@ -1,21 +1,22 @@
 import "./about.css";
+import LanguagePack from "../../../assets/lang"
 // Created by TheFuZeeXD
-// 2025 © TheFuZeeXD All rights reserved.
+// 2026 © TheFuZeeXD All rights reserved.
 
 export default function About() {
     return (
   <div id="container_about">
                 <div className="about">
-                    <h1>Обо мне</h1>
-                    <p>Я занимаюсь созданием интерактивных веб-интерфейсов: от концепта до поставки. В проектах использую современные стандарты HTML/CSS/JS, внимание к доступности и анимациям, которые не отвлекают, но создают характер.</p> 
+                    <h1>{LanguagePack.About.title}</h1>
+                    <p>{LanguagePack.About.description}</p> 
                     <div className="stats">
-                        <div><h2>2+</h2><span>года опыта</span></div>
-                        <div><h2>30+</h2><span>завершённых задач</span></div>
-                        <div><h2>5+</h2><span>публичных репозиториев</span></div>
+                        <div><h2>2+</h2><span>{LanguagePack.About.span_1}</span></div>
+                        <div><h2>30+</h2><span>{LanguagePack.About.span_2}</span></div>
+                        <div><h2>5+</h2><span>{LanguagePack.About.span_3}</span></div>
                     </div>
                 </div>
                 <div className="instruments">
-                    <h1>Инструменты</h1>
+                    <h1>{LanguagePack.About.stats}</h1>
                     <div id="container_bars">
                     <div className="TaskBar"><span>HTML</span>
                     <div className="bar"><div></div></div>
@@ -33,5 +34,4 @@ export default function About() {
                 </div>
                 
             </div>
-
-    ) }
+)}

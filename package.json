@@ -1,7 +1,7 @@
 {
-  "name": "thefuzeexd.ru",
+  "name": "thefuzeexd.com",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.13.5",
     "@emotion/react": "^11.14.0",
+    "marked": "^17.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "vite-plugin-php": "^2.0.4"

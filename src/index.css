@@ -2,7 +2,6 @@
     transition: all 0.2s;
 }
 
-
 html {
      background: linear-gradient(180deg, rgb(30, 35, 48), rgb(15, 15, 15));
      background-repeat: no-repeat;
@@ -17,7 +16,7 @@ html, body {
 
 body {
     width: 80%;
-    margin: auto;
+    margin: auto; 
         
 }
 
@@ -27,6 +26,9 @@ body {
     justify-content: center;
 }
 
+:root {
+    --knot-animation: 3s;
+}
 
 
 ::-webkit-scrollbar {
@@ -76,29 +78,86 @@ body {
     visibility: hidden;
 }
 
-.loader {
+
+#knot {
+    background-image: url("/image/Blend Group 1.png");
+    width: 100%;
+    height: 100%;
     position: absolute;
-
-    top: 390;
-    width: 50px;
-    height: 50px;
-    border: 5px solid #ccc;
-    border-top-color: rgb(21, 181, 255);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    background-size: 200%;
+    background-position: -400px 100px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+   clip-path: inset(0 100% 0 0);
+  border-radius: 200px;
+    animation: clipFade 1.5s var(--knot-animation) ease-in-out forwards;
+    filter: opacity(0.8);
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+#knot-2 {
+    background-image: url("/image/Blend Group 2.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1500px;
+    background-size: 200%;
+    background-position: -400px 100px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    ); 
+    -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    );
+    clip-path: inset(0 0 0 100%);
+    border-radius: 200px;
+    filter: opacity(0.8);
+}
+#knot-2.visible {
+    animation: clipFade 1.5s var(--knot-animation) ease-in-out forwards;
 }
 
 
+#LoadPage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 6px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgb(41, 41, 41);
+    animation: open 0.6s  both;
+}
+
+#LoadPage div {
+    animation: load 1.7s 0.6s infinite;
+    transform: translateX(-100px);
+    background-color: rgb(21, 181, 255);
+    width: 50%;
+    height: 100%;
+    border-radius: 2px;
+}
 
 .scene {
     width: 200px;
@@ -125,6 +184,11 @@ body {
     box-shadow: 0 0 10px cyan;
 }
 
+pre {
+    margin: 0;
+    display: inline;
+    margin: -10px !important;
+}
 
 .front {
     transform: translateZ(100px);
@@ -150,15 +214,7 @@ body {
     transform: rotateX(-90deg) translateZ(100px);
 }
 
-@keyframes rotateCube {
-    from {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
 
-    to {
-        transform: rotateX(360deg) rotateY(360deg);
-    }
-}
 
 
 body {
@@ -184,11 +240,12 @@ body.LoadHidden {
     font-weight: 900;
     color: transparent;
     transform-style: preserve-3d;
-    animation: float 3s infinite ease-in-out;
+    animation: float 3s infinite ease-in-out, openit 0.6s both;
     margin-bottom: 50px;
     text-shadow: none;
     line-height: 1;
     z-index: 10;
+    opacity: 0;
 }
 
 .fz-text span {
@@ -229,30 +286,7 @@ body.LoadHidden {
 
 
 
-@keyframes float {
 
-    0%,
-    100% {
-        transform: translateY(0) rotateX(10deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotateX(10deg);
-    }
-}
-
-
-@keyframes textPulse {
-    0% {
-        opacity: 0.3;
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-
-    100% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(1.2);
-    }
-}
 
 .particle {
     position: absolute;
@@ -262,22 +296,6 @@ body.LoadHidden {
     filter: blur(1px);
     transition: opacity 1.5s ease-out;
 }
-
-
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 .divline {
     width: 100%;
@@ -292,15 +310,17 @@ aside {
     width: 25%;
     pointer-events: none;
     right: 0;
-    top: 0;
+    bottom: 0;
+    z-index: 1212212;
 }
 
 aside .notif {
     pointer-events:all ;
-    background-color: #222;
+    background-color: #22222221;
     border: 2px solid #444;
     border-radius: 10px;
     margin: 20px;
+    backdrop-filter: blur(29px);
     padding: 10px;
     color: #fff;   
     font-family: roboto; 
@@ -309,30 +329,23 @@ aside .notif {
         fadeOut 0.5s ease-in-out 7s both;
     opacity: 0;
 }
-@keyframes fadeOut {
-    from {
-    }
-    to {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
 
 aside .notif h1 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
 }   
+
+aside .notif p {
+    font-size: 16px;
+    margin: 10px;
+    color: #bbbbbb;
+    margin-bottom: 15px;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -342,5 +355,16 @@ aside {
     height: 100%;
     right: 0;
     top: 0;
+}
+#knot {
+    display: none;
+}
+
+#knot-2 {
+    display: none;
+}
+
+#container_projects {
+    align-items: center !important;
 }
 }

@@ -21,9 +21,7 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-lang.ts
-language
-main.html
 *.sw?
-.verify-email.php
 .php-tmp
+/resource/php
+auth

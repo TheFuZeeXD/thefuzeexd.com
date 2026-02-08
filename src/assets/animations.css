@@ -1,0 +1,94 @@
+@keyframes open {
+    to {width: 200px;}
+}
+
+@keyframes load {
+    from {transform: translateX(-300px);}
+    to {transform: translateX(400px);}
+}
+
+
+@keyframes openit {
+    to {opacity: 1;}
+}
+
+@keyframes float {
+    0%, 100% {transform: translateY(0) rotateX(10deg);}
+    50% {transform: translateY(-20px) rotateX(10deg);}
+}
+
+
+@keyframes textPulse {
+    0% {opacity: 0.3;transform: translate(-50%, -50%) scale(0.8);}
+    100% {opacity: 0.8;transform: translate(-50%, -50%) scale(1.2);}
+}
+
+@keyframes fadeOut {
+    to {opacity: 0;transform: translateY(100px);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;transform: translateY(100px);}
+    to {opacity: 1;transform: translateY(0px);}
+}
+
+@keyframes loadheader {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+@keyframes loadheader_content {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes loadpage_main_description {
+    to {opacity: 1;}
+}
+
+@keyframes down_stats {
+    0% {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes up_stats {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-5px);}
+}
+
+@keyframes grow_bar_1 {
+    0% {width: 0%;}
+    100% {width: 85%;}
+}
+
+@keyframes grow_bar_2 {
+    0% {width: 0%;}
+    100% {width: 75%;}
+}
+
+@keyframes grow_bar_3 {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+
+@keyframes grow_bar_4 {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+
+@keyframes clipFade {
+  to {clip-path: inset(0 0 0 0);}
+}
+
+@keyframes glyanc {
+    from {left:-600px;} 
+    to {left: 600px;}
+}
+
+@keyframes conveer-text {
+    0% {
+        left:20px;
+    } 100% {
+        left: -680px;
+    }   
+}

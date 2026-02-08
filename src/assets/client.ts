@@ -1,11 +1,13 @@
 // HTML Elements
-import Header from "../components/header/Header"
-import Footer from "../components/footer/Footer"
-import Content from "../components/content/Content"
-import About from "../components/content/about/About"
-import Project from "../components/content/projects/Project"
-import Skills from "../components/content/skills/Skills"
-import Contact from "../components/content/contact/Contact"
+import Header from "@components/header/Header"
+import Footer from "@components/footer/Footer"
+import Content from "@components/content/Content"
+import About from "@components/content/about/About"
+import Project from "@components/content/projects/Project"
+import Skills from "@components/content/skills/Skills"
+import Contact from "@components/content/contact/Contact"
+import Navigator from "@components/content/navigator/Navigator"
+import Preview from "@components/content/preview/Preview"
 
 export const HTMLDoom: object = {
     Header,
@@ -15,6 +17,8 @@ export const HTMLDoom: object = {
     Project,
     Skills,
     Contact,
+    Navigator,
+    Preview
 }
 
 // Themes and Time

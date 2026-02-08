@@ -1,0 +1,171 @@
+#preview video {
+    border-radius: 25px 25px 7px 7px ;
+    width: 500px;
+}
+
+#preview {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.preview_container_text {
+    color: white;
+    font-family: roboto;
+    margin: 0px 10px;
+}
+
+.preview_container_text h1 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+.preview_container_text p {
+    width: 80%;
+    color: rgb(175, 175, 175);
+    font-size: 20px;
+}
+.preview_container_video {
+    margin: 0px 10px;
+}
+
+#uwu-span {
+    color: transparent;
+    background: linear-gradient(45deg, rgb(124, 0, 108),rgb(255, 0, 157));
+    background-clip:text;
+}
+
+#cat-span {
+    color: transparent;
+    background: linear-gradient(45deg, rgb(90, 203, 255),rgb(94, 158, 255));
+    background-clip:text;
+}
+
+.preview_container_text:nth-child(1) h1 {
+    display: flex;
+    align-items: center;
+}
+.uwucat_logo {
+    user-select: none;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+@media screen and (max-width:1550px) {
+   .preview_container_text h1 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.preview_container_text p {
+    width: 80%;
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+} 
+
+#preview video {
+    width: 400px;
+}
+}
+
+#invite_uwucat {
+    display: none;
+}
+
+#preview {
+    margin: 20px 0px !important;
+}
+.preview_container_text:nth-child(2) {
+    text-align: right;
+
+}
+
+sub {
+    color: rgb(71, 71, 71);
+}
+.preview_container_text:nth-child(2) p {
+    width: 80%;
+    margin-left: 20%;
+    
+}
+@media screen and (max-width:900px) {
+#preview {
+    flex-direction: column-reverse;
+}
+
+    .preview_container_text h1 {
+    width: 100%;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.preview_container_text p {
+    width: 100%;
+    text-align: center;
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+} 
+
+#preview video {
+    width: 290px;
+    margin-bottom: 10px;
+}
+
+#invite_uwucat {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(45deg, rgb(108, 68, 255), rgb(57, 57, 197));
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 12px rgb(0, 67, 112);
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#invite_uwucat:hover {
+    width: 230px;
+    border-radius: 50px;
+}
+
+#invite_uwucat img {
+width: 30px;
+}
+
+#invite_uwucat span {
+    margin-left: 1px;
+    width: 100%;
+}
+
+.nth2preview {
+    flex-direction: column !important;
+}
+sub {
+    margin-top: 10px;
+    display: block;
+}
+.preview_container_text:nth-child(2) p {
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.uwucat_logo {
+   display: none;
+}
+
+.preview_container_text:nth-child(1) h1 {
+    display: block;
+}
+}
